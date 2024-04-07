@@ -11,6 +11,7 @@ labels = np.sort(np.unique(y))
 y = np.array([np.where(labels == x) for x in y]).flatten()
 
 #model = LogisticRegression().fit(X, y) #Score - 0.329
+#Pass Both
 model = RandomForestClassifier(n_estimators=100, random_state=42).fit(X, y)  # Score - 0.428
 
 with open("model.pkl", 'wb') as f:
