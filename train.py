@@ -10,6 +10,8 @@ y = df['Disease'].to_numpy()
 labels = np.sort(np.unique(y))
 y = np.array([np.where(labels == x) for x in y]).flatten()
 
+<<<<<<< HEAD
+Fail Both
 #model = LogisticRegression().fit(X, y) #Score - 0.329
 model = RandomForestClassifier(n_estimators=100, random_state=42).fit(X, y)  # Score - 0.428
 
